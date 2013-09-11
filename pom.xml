@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>cq-thingies</groupId>
+	<artifactId>cq-thingies</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<modules>
+		<module>taglibs</module>
+		<module>components</module>
+	</modules>
+	<packaging>pom</packaging>
+
+	<developers>
+		<developer>
+			<id>ilikeorangutans</id>
+			<email>jakob.kuelzer@gmail.com</email>
+			<name>Jakob Külzer</name>
+			<timezone>EST</timezone>
+			<roles>
+				<role>I built this.</role>
+			</roles>
+		</developer>
+	</developers>
+
+
+	<build>
+		<pluginManagement>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>com.mycila</groupId>
+				<artifactId>license-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<header>com/mycila/licenses/APACHE-2</header>
+					<properties>
+						<owner>Jakob Külzer</owner>
+						<year>2013</year>
+						<email>jakob.kuelzer@gmail.com</email>
+					</properties>
+					<excludes>
+						<exclude>**/README</exclude>
+						<exclude>src/test/resources/**</exclude>
+						<exclude>src/main/resources/**</exclude>
+						<exclude>LICENSE.txt</exclude>
+						<exclude>atlassian-ide-plugin.xml</exclude>
+					</excludes>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>com.mycila</groupId>
+						<artifactId>licenses</artifactId>
+						<version>1</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>adobe-public-releases</id>
+			<name>Adobe Public Repository</name>
+			<url>http://repo.adobe.com/nexus/content/groups/public</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>adobe-public-releases</id>
+			<name>Adobe Public Repository</name>
+			<url>http://repo.adobe.com/nexus/content/groups/public</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+
+	<distributionManagement>
+		<repository>
+			<id>github-release-repo</id>
+			<url>https://github.com/ilikeorangutans/maven-repo/raw/master/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>github-snapshot-repo</id>
+			<url>https://github.com/ilikeorangutans/maven-repo/raw/master/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+
+	<scm>
+		<connection>https://github.com/ilikeorangutans/cq-thingies</connection>
+		<developerConnection>git@github.com:ilikeorangutans/cq-thingies.git</developerConnection>
+		<url>https://github.com/ilikeorangutans/cq-thingies</url>
+	</scm>
+
+</project>
