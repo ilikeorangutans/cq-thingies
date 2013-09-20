@@ -33,8 +33,8 @@ public class EditModeOnlyTag extends BodyTagSupport {
 		final WCMMode wcmMode = WCMMode.fromRequest(pageContext.getRequest());
 
 		if (wcmMode == WCMMode.EDIT)
-			return SKIP_BODY;
+			return EVAL_BODY_INCLUDE;
 
-		return EVAL_BODY_INCLUDE;
+		return SKIP_BODY;
 	}
 }

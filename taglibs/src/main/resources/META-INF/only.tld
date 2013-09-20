@@ -6,7 +6,8 @@
         version="2.0">
 
 	<description>
-		Tags that will limit visibility of wrapped content. For example, the &lt;only:edit /&gt; tag will render the wrapped
+		Tags that will limit visibility of wrapped content. For example, the &lt;only:edit /&gt; tag will render the
+		wrapped
 		content only in edit mode.
 	</description>
 
@@ -26,5 +27,15 @@
 		<tag-class>de.jakusys.cqthingies.taglib.visibility.DesignModeOnlyTag</tag-class>
 		<body-content>JSP</body-content>
 	</tag>
-
+	<tag>
+		<description>Show wrapped content only in design mode.</description>
+		<name>runmodes</name>
+		<tag-class>de.jakusys.cqthingies.taglib.visibility.RunModesOnlyTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<name>runmodes</name>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+	</tag>
 </taglib>

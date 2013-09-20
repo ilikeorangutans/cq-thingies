@@ -36,3 +36,9 @@ CMS. For example:
             Another helpful message only visible in design mode, but not in preview or on publish instances.
         </p>
     </only:design>
+
+    <only:runmodes runmodes="author,qa">
+        <p>
+            Message only visible in runmodes author or qa
+        </p>
+    </only:runmodes>
