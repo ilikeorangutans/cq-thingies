@@ -1,5 +1,6 @@
 target/
 
+.AppleDouble
 .idea
 *.iml
 atlassian-ide-plugin.xml
